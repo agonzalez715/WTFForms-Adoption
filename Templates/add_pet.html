@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Add a Pet</title>
+  </head>
+  <body>
+    <h1>Add a Pet</h1>
+    <form method="POST">
+      {{ form.csrf_token }}
+      <div>
+        {{ form.name.label }} {{ form.name }}
+      </div>
+      <div>
+        {{ form.species.label }} {{ form.species }}
+      </div>
+      <div>
+        {{ form.photo_url.label }} {{ form.photo_url }}
+      </div>
+      <div>
+        {{ form.age.label }} {{ form.age }}
+      </div>
+      <div>
+        {{ form.notes.label }} {{ form.notes }}
+      </div>
+      <button type="submit">Add Pet</button>
+    </form>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+  </body>
+</html>
